@@ -35,7 +35,6 @@ function Pay_info(){
     }
 
     function MOMO(e) {
-        e.preventDefault();
         axios
           .post(MOMOURL, {
             amount: price
@@ -44,7 +43,6 @@ function Pay_info(){
           })
       }
       function VNPAY(e) {
-        e.preventDefault();
         axios
           .post(VNPAYURL, {
             amount: price
