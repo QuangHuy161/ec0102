@@ -5,7 +5,6 @@ import App from './App';
 import './custom.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import ad_login from "./component/function/fn_a_login";
-import 'font-awesome/css/font-awesome.min.css'; 
 
 
 

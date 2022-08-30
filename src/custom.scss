@@ -487,33 +487,39 @@ img.brands{
 
 
 //Contact================================================================
-.map{
-    margin-right: 50px; 
-}
+.contact{
+    margin: 30px auto;
+    text-align: center;
+    .map{
+        margin-right: 50px; 
+        display: inline-block;
+    }
 
-.contact {
-    margin: 70px;
-    display: flex;
-    flex-direction: row;
-}
+    .contact {
+        margin: 70px;
+        display: flex;
+        flex-direction: row;
+    }
 
-.list-contact {
-    >div>div{
-        >div{
-            font-size: 15px;
+    .list-contact {
+        text-align: left;
+        display: inline-block;
+        >div>div{
+            >div{
+                font-size: 15px;
+            }
         }
+        svg{
+            margin-right: 15px;
+        }
+        
     }
-    i{
-        margin-right: 15px;
-        width: 20px;
+    .img-store{
+        width: 540px;
+        margin-bottom: 20px;
     }
-    
-}
-.img-store{
-    width: 540px;
-    margin-bottom: 20px;
-}
 
+}
 ///ITEM===============================================
 .item_box{
     .social-icon{
