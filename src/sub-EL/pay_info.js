@@ -2,7 +2,7 @@ import Table from 'react-bootstrap/Table';
 import axios from 'axios';
 import React from 'react';
 
-const MOMOURL = "http://localhost:5000/api/v1/payment/MOMO"
+const MOMOURL = "https://ec01-02-shop.herokuapp.com/api/v1/payment/MOMO"
 const VNPAYURL = "https://ec01-02-shop.herokuapp.com/api/v1/payment/VNPAY"
 //const baseURL
 
@@ -34,85 +34,6 @@ function Pay_info(){
 
     }
 
-    // function MOMO(e) {
-    //     let name = document.getElementById('name').value;
-    //     let phone = document.getElementById('phone').value;
-    //     let email = document.getElementById('email').value;
-    //     let province = document.getElementById('province').value;
-    //     let district = document.getElementById('district').value;
-    //     let ward = document.getElementById('ward').value;
-    //     let address = document.getElementById('address').value;
-    //     let note = document.getElementById('note').value;
-
-    //     e.preventDefault();
-    //     let order ={
-    //         name: name,
-    //         phone:phone,
-    //         email:email,
-    //         province:province,
-    //         district:district,
-    //         ward:ward,
-    //         address:address,
-    //         note: note,
-    //         order: window.localStorage.getItem("list_products"),
-    //         price:price
-    //     }
-        
-        
-    //     axios({
-    //             method: "post",
-    //             url: MOMOURL,
-    //             amount:price,
-    //             data: JSON.stringify(order),
-    //         })
-    //         .then(function (response) {
-    //             //handle success
-    //             console.log(response);
-    //         })
-    //         .catch(function (response) {
-    //             //handle error
-    //             console.log(response);
-    //         });
-    //   }
-    //   function VNPAY(e) {
-    //     let name = document.getElementById('name').value;
-    //     let phone = document.getElementById('phone').value;
-    //     let email = document.getElementById('email').value;
-    //     let province = document.getElementById('province').value;
-    //     let district = document.getElementById('district').value;
-    //     let ward = document.getElementById('ward').value;
-    //     let address = document.getElementById('address').value;
-    //     let note = document.getElementById('note').value;
-
-    //     let order ={
-    //         name: name,
-    //         phone:phone,
-    //         email:email,
-    //         province:province,
-    //         district:district,
-    //         ward:ward,
-    //         address:address,
-    //         note: note,
-    //         order: window.localStorage.getItem("list_products"),
-    //         price:price
-    //     }
-        
-    //     axios({
-    //         method: "post",
-    //         url: VNPAYURL,
-    //         amount:price,
-    //         //data: JSON.stringify(order),
-    //         headers: { "Content-Type": "multipart/form-data" },
-    //       })
-    //         .then(function (response) {
-    //           //handle success
-    //           console.log(response);
-    //         })
-    //         .catch(function (response) {
-    //           //handle error
-    //           console.log(response);
-    //         });
-    //   }
     function MOMO(e) {
         let name = document.getElementById('name').value;
         let phone = document.getElementById('phone').value;
