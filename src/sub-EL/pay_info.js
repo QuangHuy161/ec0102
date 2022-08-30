@@ -35,11 +35,32 @@ function Pay_info(){
     }
 
     function MOMO(e) {
-        e.preventDefault();
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById('phone').value;
+        let email = document.getElementById('email').value;
+        let province = document.getElementById('province').value;
+        let district = document.getElementById('district').value;
+        let ward = document.getElementById('ward').value;
+        let address = document.getElementById('address').value;
+        let note = document.getElementById('note').value;
+
+        let order ={
+            name: name,
+            phone:phone,
+            email:email,
+            province:province,
+            district:district,
+            ward:ward,
+            address:address,
+            note: note,
+            order: window.localStorage.getItem("list_products"),
+            price:price
+        }
+        
         axios({
             method: "post",
             url: MOMOURL,
-            amount: price,
+            data: order,
             headers: { "Content-Type": "multipart/form-data" },
           })
             .then(function (response) {
@@ -52,10 +73,32 @@ function Pay_info(){
             });
       }
       function VNPAY(e) {
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById('phone').value;
+        let email = document.getElementById('email').value;
+        let province = document.getElementById('province').value;
+        let district = document.getElementById('district').value;
+        let ward = document.getElementById('ward').value;
+        let address = document.getElementById('address').value;
+        let note = document.getElementById('note').value;
+
+        let order ={
+            name: name,
+            phone:phone,
+            email:email,
+            province:province,
+            district:district,
+            ward:ward,
+            address:address,
+            note: note,
+            order: window.localStorage.getItem("list_products"),
+            price:price
+        }
+        
         axios({
             method: "post",
             url: VNPAYURL,
-            amount: price,
+            data: order,
             headers: { "Content-Type": "multipart/form-data" },
           })
             .then(function (response) {
@@ -91,9 +134,9 @@ function Pay_info(){
                             </div>
                             <div>
                                 <label>
-                                    Email(*)
+                                    Email
                                 </label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required/>
+                                <input type="email" id="email" name="email" placeholder="Enter your email"/>
                             </div>
                             <div>
                                 <label>
