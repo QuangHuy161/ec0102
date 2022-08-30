@@ -60,6 +60,7 @@ function Pay_info(){
         axios({
             method: "post",
             url: MOMOURL,
+            amount:price,
             data: order,
             headers: { "Content-Type": "multipart/form-data" },
           })
@@ -98,6 +99,7 @@ function Pay_info(){
         axios({
             method: "post",
             url: VNPAYURL,
+            amount:price,
             data: order,
             headers: { "Content-Type": "multipart/form-data" },
           })
