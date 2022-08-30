@@ -35,19 +35,36 @@ function Pay_info(){
     }
 
     function MOMO(e) {
-        axios
-          .post(MOMOURL, {
-            amount: price
-          }).then((res) => {
-            console.log(res)
+        axios({
+            method: "post",
+            url: MOMOURL,
+            amount: price,
+            headers: { "Content-Type": "multipart/form-data" },
           })
+            .then(function (response) {
+              //handle success
+              console.log(response);
+            })
+            .catch(function (response) {
+              //handle error
+              console.log(response);
+            });
       }
       function VNPAY(e) {
-        axios
-          .post(VNPAYURL, {
-            amount: price
-          }).then((res) => {
+        axios({
+            method: "post",
+            url: VNPAYURL,
+            amount: price,
+            headers: { "Content-Type": "multipart/form-data" },
           })
+            .then(function (response) {
+              //handle success
+              console.log(response);
+            })
+            .catch(function (response) {
+              //handle error
+              console.log(response);
+            });
       }
 
     return(
