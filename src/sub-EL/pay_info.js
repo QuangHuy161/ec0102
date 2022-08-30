@@ -34,14 +34,17 @@ function Pay_info(){
 
     }
 
-    function MOMO() {
+    function MOMO(e) {
+        e.preventDefault();
         axios
           .post(MOMOURL, {
             amount: price
           }).then((res) => {
+            console.log(res)
           })
       }
-      function VNPAY() {
+      function VNPAY(e) {
+        e.preventDefault();
         axios
           .post(VNPAYURL, {
             amount: price
