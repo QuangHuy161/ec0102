@@ -36,7 +36,6 @@ function Item (){
                     break;
                 }
             }
-            console.log(item)
             window.localStorage.setItem('curent',JSON.stringify(item));
         })
     let e= JSON.parse(window.localStorage.getItem('curent'))
