@@ -35,6 +35,7 @@ function Pay_info(){
     }
 
     function MOMO(e) {
+        e.preventDefault();
         axios({
             method: "post",
             url: MOMOURL,
